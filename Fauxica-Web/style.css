@@ -1,0 +1,275 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* header style */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  margin: 4em;
+  box-sizing: border-box;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 3.6em;
+  list-style-type: none;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #111;
+  line-height: normal;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-links ul li a.active::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid black;
+  width: 35%;
+  bottom: -1px;
+  height: 1px;
+}
+
+.nav-links ul li a::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid rgb(175, 175, 175);
+  width: 0;
+  bottom: -1px;
+  height: 1px;
+  transition: width 0.3s ease-in;
+}
+
+.nav-links ul li a:hover::before {
+  width: 35%;
+}
+
+/* main section style */
+
+main {
+  display: flex;
+  gap: 8em;
+  margin-top: 6.5em;
+  margin-bottom: 6.5em;
+}
+
+/* left-column */
+
+.left-column {
+  width: 45%;
+  margin: 0;
+}
+
+.right-column {
+  flex-grow: 1;
+}
+
+.left-column h1 {
+  font-size: 5.2rem;
+  font-family: "Playfair Display";
+  font-weight: normal;
+  margin: 0;
+}
+
+.sub-heading {
+  font-size: 1.8rem;
+  margin: 2em 0;
+}
+
+.faux-btns,
+.secondary-btn {
+  display: flex;
+  gap: 3.8em;
+}
+
+.primary-btn {
+  background-color: #f2f0df;
+  color: #111;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1em 2em;
+  border-radius: 1em;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #f2eec9;
+}
+
+.secondary-btn {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #111;
+  display: block;
+  padding: 1em 0;
+  gap: 0.8em;
+}
+
+.secondary-btn svg {
+  width: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.secondary-btn:hover svg {
+  transform: translateX(10px);
+}
+
+.secondary-btn:hover {
+  text-decoration: underline;
+}
+
+.message {
+  margin-top: 2.5em;
+  border: 1px solid #111;
+  border-radius: 0.8em;
+  display: flex;
+  padding: 3.5em;
+  position: relative;
+  gap: 2em;
+}
+
+.message::before {
+  position: absolute;
+  content: "";
+  background: url(images/confetti.svg);
+  height: 100px;
+  width: 100px;
+  top: -15px;
+  left: -20px;
+}
+
+.employee {
+  font-size: 3.3rem;
+  margin: 0;
+  font-weight: 300;
+  line-height: 200%;
+}
+
+.news {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+/* right-column */
+
+.right-column {
+  display: grid;
+  gap: 2.3em;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas:
+    "left ."
+    "left .";
+}
+
+.card {
+  background-color: gainsboro;
+  border-radius: 0.8em;
+  padding: 1.1em;
+  display: flex;
+  align-items: end;
+  transition: background-size 800ms;
+}
+
+.product-details {
+  background-color: #ffffff5e;
+  border-radius: 0.6em;
+  padding: 1.4em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 800ms;
+}
+
+.product-details div a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #111;
+}
+
+.product-details div {
+  line-height: 1;
+}
+
+.product-name {
+  color: #818181;
+}
+
+.product-price {
+  font-size: 1.7rem;
+}
+
+.vertical-line:before {
+  position: absolute;
+  content: "";
+  height: 40%;
+  border: 1px solid #999999;
+  right: 85px;
+  top: 28px;
+}
+
+.card1 {
+  background-image: url(images/clothing1.jpg);
+  background-repeat: no-repeat;
+  background-size: 120%;
+  grid-area: left;
+  position: relative;
+}
+
+.card2 {
+  background-image: url(images/clothing2.jpg);
+  background-size: 120%;
+  background-repeat: no-repeat;
+}
+
+.card3 {
+  background-image: url(images/clothing3.jpg);
+  background-size: 120%;
+  background-repeat: no-repeat;
+}
+
+.card1::before {
+  position: absolute;
+  content: "";
+  background: url(images/tag.svg) no-repeat;
+  width: 206px;
+  height: 158px;
+  top: 0;
+  left: -60px;
+  z-index: 999;
+}
+
+.card:hover {
+  background-size: 155%;
+  background-repeat: no-repeat;
+}
+
+.card:hover .product-details {
+  transform: translateY(-10px);
+}

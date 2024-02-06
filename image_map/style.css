@@ -1,0 +1,61 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+p, h3{
+    margin:0;
+    padding: 0;
+}
+
+img{
+    display: block;
+    margin: auto;
+}
+
+.wrapper{
+    width: 100%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+}
+
+.list-links{
+    position: absolute;
+    background-color: #fff;
+    width: 25%;
+    top: 20rem ;
+    left: 15rem;
+}
+
+
+.list-links h3{
+    margin-top: 10px;
+}
+
+.location{
+    width: 25px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.location1{
+    bottom: 47.5rem;
+    right: 42.2rem;
+}
+
+
+.location2{
+    bottom: 33.5rem;
+    right: 27.5rem;
+}
+
+
+.location3{
+    bottom: 26.6rem;
+    right: 23rem;
+}
+

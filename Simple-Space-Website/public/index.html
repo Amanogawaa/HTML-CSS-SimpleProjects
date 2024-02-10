@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="sm:scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
           <a href="#home">🚀 Acme Rockets</a>
         </h1>
         <button class="sm:hidden text-3xl focus:outline-none">&#9776;</button>
-        <nav class="max-sm:hidden ml-1" aria-label="main-nav ">
+        <nav class="hidden sm:block ml-1" aria-label="main-nav ">
           <ul class="flex items-center transition-opacity space-x-8">
             <li><a href="#home" class="hover:opacity-90 font-semibold">Home</a></li>
             <li><a href="#rockets" class="hover:opacity-90 font-semibold">Rockets</a></li>
@@ -28,7 +28,7 @@
     <!-- hero section -->
 
     <main class="max-w-4xl mx-auto">
-      <section id="home" class="flex flex-col-reverse justify-center items-center p-6 space-x-6 mb-12 sm:flex-row scroll-mt-80">
+      <section id="home" class="flex flex-col-reverse justify-center items-center p-6 space-x-6 mb-12 sm:flex-row scroll-mt-50">
         <article class="sm:w-1/2">
           <h2 class="max-w-md text-4xl font-bold text-center sm:text-5sl sm:text-left text-slate-500 dark:text-white">
             We Boldy Go <span class="text-indigo-700 dark:text-indigo-300">Where No Rockets</span> Has Gone Before...
@@ -121,8 +121,42 @@
 
       <section id="contact" class="p-6 my-12 scroll-mt-20">
         <h2 class="text-4xl font-extrabold text-center mb-6 text-slate-900 dark:text-white max-sm:text-4xl">Contact Us</h2>
-        <form action="#"></form>
+        <form action="#" class="max-w-2xl mx-auto text-2xl flex flex-col">
+          <label for="subject">Subject:</label>
+          <input type="text" name="subject" placeholder="Text here" class="w-full rounded-xl p-2.5 mb-5 mt-2 text-black text-xl" />
+          <label for="message">Message:</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Text here"
+            class="w-full rounded-xl p-2.5 mb-5 mt-2 text-black text-xl"
+          ></textarea>
+          <button class="w-48 p-2 rounded-lg bg-teal-700 text-lg hover:bg-teal-800">Submit</button>
+        </form>
       </section>
     </main>
+
+    <footer class="bg-teal-800 text-white text-xl">
+      <section class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
+        <address>
+          <h2>Acme Rocket-Powered Products, Inc.</h2>
+          555 Astro Way<br />
+          Fairfield, New Jersey 12345-5555<br />
+          Email: <a href="mailto:inquiries@acmerockets.com">Inquires@AcmeRockets.com</a><br />
+          Phone: <a href="tel:+15555555555">(555) 555-5555</a>
+        </address>
+        <nav class="hidden md:flex flex-col gap-2" aria-label="footer">
+          <a href="#rockets" class="hover:opacity-90">Our Rockets</a>
+          <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
+          <a href="#contact" class="hover:opacity-90">Contact Us</a>
+        </nav>
+        <div class="flex flex-col sm:gap-2">
+          <p class="text-right">Copyright &copy; <span id="year">2022</span></p>
+          <p class="text-right">All Rights Reserved</p>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
